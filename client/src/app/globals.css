@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --background: #ffffff;
+  --background: rgb(31 41 55 / var(--tw-bg-opacity, 1));
   --foreground: #171717;
 }
 

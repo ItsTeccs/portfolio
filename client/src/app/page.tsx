@@ -1,11 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { FaLinkedin, FaBluesky, FaGithub, FaEnvelope } from "react-icons/fa6";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const Portfolio = () => {
-  const [activeSection, setActiveSection] = useState("projects");
-
   const projects = [
     {
       title: "E-commerce Platform",
@@ -45,63 +43,84 @@ const Portfolio = () => {
     },
   ];
 
+  const technologies = [
+    "JavaScript/TypeScript",
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Tailwind CSS",
+    "PostgreSQL",
+    "Git",
+    "AWS",
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900">
       {/* Header/Nav */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-gray-800 shadow-lg fixed w-full top-0 z-50 border-b border-gray-700">
         <div className="max-w-5xl mx-auto px-4 py-6">
           <nav className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900">Tyler Eccles</h1>
-            <div className="flex gap-4">
-              <button
-                onClick={() => setActiveSection("projects")}
-                className={`px-4 py-2 rounded-lg ${
-                  activeSection === "projects"
-                    ? "bg-blue-500 text-white"
-                    : "text-gray-600 hover:bg-gray-100"
-                }`}
+            <h1 className="text-2xl font-bold text-white">Tyler Eccles</h1>
+            <div className="flex gap-6">
+              <a
+                href="#about"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
+                About
+              </a>
+              <a
+                href="#projects"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
               >
                 Projects
-              </button>
-              <button
-                onClick={() => setActiveSection("experience")}
-                className={`px-4 py-2 rounded-lg ${
-                  activeSection === "experience"
-                    ? "bg-blue-500 text-white"
-                    : "text-gray-600 hover:bg-gray-100"
-                }`}
+              </a>
+              <a
+                href="#experience"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
               >
                 Experience
-              </button>
+              </a>
+              <a
+                href="#technologies"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
+                Technologies
+              </a>
+              <a
+                href="#contact"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
+                Contact
+              </a>
             </div>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-white">
+      <section className="bg-gray-800 pt-24">
         <div className="max-w-5xl mx-auto px-4 py-16">
           <div className="text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Web Developer
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               I specialize in building responsive, scalable applications.
             </p>
             <div className="flex justify-center gap-6">
               <a
-                href="#"
+                href="https://github.com/itsteccs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#1B1F24] hover:text-gray-900 transition-colors duration-300"
+                className="text-[#1B1F24] hover:text-white transition-colors duration-300"
               >
                 <FaGithub size={48} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/tyler-eccles-81b265265/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#0073b1] hover:text-gray-900 transition-colors duration-300"
+                className="text-[#0073b1] hover:text-white transition-colors duration-300"
               >
                 <FaLinkedin size={48} />
               </a>
@@ -109,15 +128,15 @@ const Portfolio = () => {
                 href="https://bsky.app/profile/teccs.bsky.social"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#1185fe] hover:text-gray-900 transition-colors duration-300"
+                className="text-[#1185fe] hover:text-white transition-colors duration-300"
               >
                 <FaBluesky size={48} />
               </a>
               <a
-                href="#"
+                href="mailto:itsteccs@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-300"
+                className="text-white hover:text-white transition-colors duration-300"
               >
                 <FaEnvelope size={48} />
               </a>
@@ -127,28 +146,48 @@ const Portfolio = () => {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-5xl mx-auto px-4 py-12">
-        {activeSection === "projects" ? (
+      <main className="max-w-5xl mx-auto px-4 py-12 space-y-20">
+        {/* About Section */}
+        <section id="about" className="scroll-mt-24">
+          <h2 className="text-3xl font-bold text-white mb-6">About</h2>
+          <div className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700">
+            <p className="text-gray-300">
+              [Your about text here - describe your background, passion for
+              development, and what drives you]
+            </p>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="scroll-mt-24">
+          <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              <div
+                key={index}
+                className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700 flex flex-col h-full"
+              >
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <a
                   href={project.link}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 mt-4"
                 >
                   View Project
                   <ExternalLink size={16} className="ml-1" />
@@ -156,28 +195,71 @@ const Portfolio = () => {
               </div>
             ))}
           </div>
-        ) : (
-          <div className="space-y-8">
+        </section>
+
+        {/* Experience Section */}
+        <section id="experience" className="scroll-mt-24">
+          <h2 className="text-3xl font-bold text-white mb-6">Experience</h2>
+          <div className="space-y-6">
             {experience.map((job, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">
+              <div
+                key={index}
+                className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700"
+              >
+                <h3 className="text-xl font-semibold text-white mb-1">
                   {job.role}
                 </h3>
-                <div className="flex justify-between text-gray-600 mb-4">
+                <div className="flex justify-between text-gray-300 mb-4">
                   <span>{job.company}</span>
                   <span>{job.period}</span>
                 </div>
-                <p className="text-gray-600">{job.description}</p>
+                <p className="text-gray-300">{job.description}</p>
               </div>
             ))}
           </div>
-        )}
+        </section>
+
+        {/* Technologies Section */}
+        <section id="technologies" className="scroll-mt-24">
+          <h2 className="text-3xl font-bold text-white mb-6">Technologies</h2>
+          <div className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700">
+            <div className="flex flex-wrap gap-3">
+              {technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-blue-900 text-blue-100 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="scroll-mt-24">
+          <h2 className="text-3xl font-bold text-white mb-6">Contact</h2>
+          <div className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700">
+            <p className="text-gray-300 mb-4">
+              I'm always open to discussing new projects and opportunities.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="mailto:your.email@example.com"
+                className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
+              >
+                <FaEnvelope className="mr-2" />
+                your.email@example.com
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t">
+      <footer className="bg-gray-800 border-t border-gray-700 mt-20">
         <div className="max-w-5xl mx-auto px-4 py-8">
-          <p className="text-center text-gray-600">
+          <p className="text-center text-gray-300">
             © 2025 Tyler Eccles. All rights reserved.
           </p>
         </div>
