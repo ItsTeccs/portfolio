@@ -241,7 +241,7 @@ const Portfolio = () => {
           <h2 className="text-3xl font-bold text-white mb-6">Contact</h2>
           <div className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700">
             <p className="text-gray-300 mb-4">
-              I'm always open to discussing new projects and opportunities.
+              {"I'm always open to discussing new projects and opportunities."}
             </p>
             <div className="flex gap-4">
               <a
