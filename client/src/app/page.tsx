@@ -6,52 +6,38 @@ import { ExternalLink } from "lucide-react";
 const Portfolio = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
+      title: "GunplaCentral",
       description:
-        "Built a full-stack e-commerce platform using Next.js, TypeScript, and Stripe integration",
-      tags: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-      link: "#",
+        "A fullstack web application for a platform to empower gunpla kit enthusiasts to catalog their collections.",
+      tags: ["Next.js", "Firebase", "React", "Go", "Postgresql", "TypeScript"],
+      link: "https://gunplacentral.com",
     },
     {
-      title: "Task Management App",
+      title: "MyLocalNWS",
       description:
-        "Developed a collaborative task management application with real-time updates",
-      tags: ["React", "Firebase", "Material-UI"],
-      link: "#",
+        "Web application to allow users to easily find their nearest National Weather Service office.",
+      tags: ["Next.js", "Firebase", "React", "Go", "TypeScript"],
+      link: "https://mylocalnws.com",
     },
     {
-      title: "Weather Dashboard",
+      title: "Godot Raycast Hitbox",
       description:
-        "Created a weather dashboard with location-based forecasts and interactive maps",
-      tags: ["React", "OpenWeather API", "Mapbox"],
-      link: "#",
-    },
-  ];
-
-  const experience = [
-    {
-      role: "Senior Frontend Developer",
-      company: "Tech Corp",
-      period: "2022 - Present",
-      description: "Led frontend development for multiple high-impact projects",
-    },
-    {
-      role: "Frontend Developer",
-      company: "StartUp Inc",
-      period: "2020 - 2022",
-      description: "Developed and maintained multiple React-based applications",
+        "High-precision RayCast hit detection module for Godot 4 with support for all major platforms.",
+      tags: ["Godot", "C#", "GDScript", "Math", "Graphics"],
+      link: "https://github.com/ItsTeccs/godot_raycast_hitbox",
     },
   ];
 
   const technologies = [
     "JavaScript/TypeScript",
+    "Go",
     "React.js",
-    "Next.js",
     "Node.js",
     "Tailwind CSS",
     "PostgreSQL",
     "Git",
     "AWS",
+    "Google Cloud Platform",
   ];
 
   return (
@@ -133,7 +119,7 @@ const Portfolio = () => {
                 <FaBluesky size={48} />
               </a>
               <a
-                href="mailto:itsteccs@gmail.com"
+                href="mailto:tyler@teccs.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-white transition-colors duration-300"
@@ -197,28 +183,6 @@ const Portfolio = () => {
           </div>
         </section>
 
-        {/* Experience Section */}
-        <section id="experience" className="scroll-mt-24">
-          <h2 className="text-3xl font-bold text-white mb-6">Experience</h2>
-          <div className="space-y-6">
-            {experience.map((job, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700"
-              >
-                <h3 className="text-xl font-semibold text-white mb-1">
-                  {job.role}
-                </h3>
-                <div className="flex justify-between text-gray-300 mb-4">
-                  <span>{job.company}</span>
-                  <span>{job.period}</span>
-                </div>
-                <p className="text-gray-300">{job.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Technologies Section */}
         <section id="technologies" className="scroll-mt-24">
           <h2 className="text-3xl font-bold text-white mb-6">Technologies</h2>
@@ -245,11 +209,11 @@ const Portfolio = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:tyler@teccs.dev"
                 className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
               >
                 <FaEnvelope className="mr-2" />
-                your.email@example.com
+                tyler@teccs.dev
               </a>
             </div>
           </div>
