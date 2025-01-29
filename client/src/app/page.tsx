@@ -61,12 +61,6 @@ const Portfolio = () => {
                 Projects
               </a>
               <a
-                href="#experience"
-                className="text-gray-300 hover:text-white transition-colors duration-300"
-              >
-                Experience
-              </a>
-              <a
                 href="#technologies"
                 className="text-gray-300 hover:text-white transition-colors duration-300"
               >
@@ -137,9 +131,42 @@ const Portfolio = () => {
         <section id="about" className="scroll-mt-24">
           <h2 className="text-3xl font-bold text-white mb-6">About</h2>
           <div className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700">
-            <p className="text-gray-300">
-              [Your about text here - describe your background, passion for
-              development, and what drives you]
+            <p className="text-gray-300 leading-relaxed">
+              Hello! I'm a software engineer passionate about building scalable
+              web applications and creating exceptional user experiences. With
+              expertise in modern web technologies and a track record of
+              delivering high-impact solutions, I specialize in both frontend
+              and backend development using React, Node.js, TypeScript, and
+              Golang.
+            </p>
+            <p className="text-gray-300 leading-relaxed mt-4">
+              Throughout my career, I've had the privilege of architecting and
+              implementing full-stack solutions that have driven significant
+              business growth and user engagement. I particularly enjoy working
+              with React and Next.js for creating responsive, user-friendly
+              interfaces, while leveraging Go and Node.js to build robust
+              backend services.
+            </p>
+            <p className="text-gray-300 leading-relaxed mt-4">
+              Beyond my professional work, I'm an active open-source contributor
+              and the creator of GunplaCentral, a full-stack platform that
+              serves the Gunpla model kit community. Built with Next.js, Go, and
+              PostgreSQL, the platform provides enthusiasts with tools to track
+              their collections across more than 4,000 model kits. I architected
+              the backend using Go to create type-safe REST APIs and implemented
+              real-time collection updates using PostgreSQL. The frontend
+              leverages React with TypeScript to deliver a responsive, intuitive
+              interface that helps users manage their collections efficiently. I
+              love working on this project and giving back to the Gunpla
+              community, and will continue to deliver high-impact features that
+              users love.
+            </p>
+            <p className="text-gray-300 leading-relaxed mt-4">
+              I thrive in collaborative environments where I can combine my
+              technical expertise with strong communication skills to transform
+              innovative ideas into reality. Currently, I'm seeking
+              opportunities to bring my experience in building scalable,
+              user-focused web applications to an innovative tech company.
             </p>
           </div>
         </section>
