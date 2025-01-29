@@ -9,15 +9,23 @@ const Portfolio = () => {
       title: "GunplaCentral",
       description:
         "A fullstack web application for a platform to empower gunpla kit enthusiasts to catalog their collections.",
-      tags: ["Next.js", "Firebase", "React", "Go", "Postgresql", "TypeScript"],
+      tags: [
+        "Next.js",
+        "Firebase",
+        "React",
+        "Tailwind",
+        "Go",
+        "Postgresql",
+        "TypeScript",
+      ],
       link: "https://gunplacentral.com",
     },
     {
-      title: "MyLocalNWS",
+      title: "This Website",
       description:
-        "Web application to allow users to easily find their nearest National Weather Service office.",
-      tags: ["Next.js", "Firebase", "React", "Go", "TypeScript"],
-      link: "https://mylocalnws.com",
+        "You can find the source code for this website on my GitHub! Hosted and deployed with Firebase.",
+      tags: ["Next.js", "Firebase", "TypeScript", "React", "Tailwind"],
+      link: "https://github.com/ItsTeccs/portfolio",
     },
     {
       title: "Godot Raycast Hitbox",
@@ -132,23 +140,23 @@ const Portfolio = () => {
           <h2 className="text-3xl font-bold text-white mb-6">About</h2>
           <div className="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700">
             <p className="text-gray-300 leading-relaxed">
-              Hello! I&apos;m a software engineer passionate about building
+              {`Hello! I'm a software engineer passionate about building
               scalable web applications and creating exceptional user
               experiences. With expertise in modern web technologies and a track
               record of delivering high-impact solutions, I specialize in both
               frontend and backend development using React, Node.js, TypeScript,
-              and Golang.
+              and Golang.`}
             </p>
             <p className="text-gray-300 leading-relaxed mt-4">
-              Throughout my career, I&apos;ve had the privilege of architecting
+              {`Throughout my career, I've had the privilege of architecting
               and implementing full-stack solutions that have driven significant
               business growth and user engagement. I particularly enjoy working
               with React and Next.js for creating responsive, user-friendly
               interfaces, while leveraging Go and Node.js to build robust
-              backend services.
+              backend services.`}
             </p>
             <p className="text-gray-300 leading-relaxed mt-4">
-              Beyond my professional work, I&apos;m an active open-source
+              {`Beyond my professional work, I'm an active open-source
               contributor and the creator of GunplaCentral, a full-stack
               platform that serves the Gunpla model kit community. Built with
               Next.js, Go, and PostgreSQL, the platform provides enthusiasts
@@ -158,14 +166,14 @@ const Portfolio = () => {
               triggers. The frontend leverages React with TypeScript to deliver
               a responsive, intuitive interface that helps users manage their
               collections efficiently. This project exemplifies my passion for
-              creating clean, efficient code that delivers real value to users.
+              creating clean, efficient code that delivers real value to users.`}
             </p>
             <p className="text-gray-300 leading-relaxed mt-4">
-              I thrive in collaborative environments where I can combine my
+              {`I thrive in collaborative environments where I can combine my
               technical expertise with strong communication skills to transform
-              innovative ideas into reality. Currently, I&apos;m seeking
+              innovative ideas into reality. Currently, I'm seeking
               opportunities to bring my experience in building scalable,
-              user-focused web applications to an innovative tech company.
+              user-focused web applications to an innovative tech company.`}
             </p>
           </div>
         </section>
